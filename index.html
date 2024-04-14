@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiere-té</title>
+    <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+    <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .slider-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .prev-btn,
+        .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+		
+		.social-images {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-images img {
+            width: 30px;
+            height: 30px;
+            margin-right: 0px;
+            cursor: pointer;
+        }
+		
+		/* Estilos del formulario */
+        #contactForm {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+			height: 500px;
+			width: 80%;
+        }
+
+        #contactForm .contacto {
+            
+			max-width: 300px;
+			position: absolute;
+			height: 400px;
+        }
+
+        #contactForm label {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        #contactForm textarea {
+            height: 100px;
+        }
+
+        #contactForm input[type="submit"] {
+            background-color: #333333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .thumbnail {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+        }
+
+        .thumbnail img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+
+        .thumbnail h1,
+        .thumbnail h4,
+        .thumbnail p {
+            margin: 0;
+        }
+
+        .thumbnail .button {
+            background-color: #333333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Navigation -->
+        <header>
+          <img class="logo" src="images/logoo.png" alt="Logo de Quiere-té" style="width: 200px; height: 100px; margin-top: 20px;">
+          <nav>
+                <ul>
+                    <li><a href="#hero">INICIO&nbsp;</a></li>
+                    <li><a href="#about">NOSOTROS&nbsp;</a></li>
+                    <li><a href="#products">PRODUCTOS&nbsp;</a></li>
+                    <li><a href="#contact">CONTACTO&nbsp;</a></li>
+                </ul>
+          </nav>
+			<div><img src="images/face.png" alt="Facebook" width="100" height="100" style="width: 30px; height: 30 px; margin-top: 0 px; margin-bottom: 0px; margin-left: 5 px" onclick="window.location.href='https://www.facebook.com/quieretemx'">
+                <img src="images/instag.png" alt="Instagram" width="100" height="100" style="width: 32px; height: 32 px; margin-left: 10px;" onclick="window.location.href='https://www.instagram.com/quieretemx?igsh=MTUxdWQ3c21zdXNtcw=='"> 
+		    </div>
+        </header>
+       <!-- Hero Section -->
+        <section class="hero" id="hero">
+    <img src="images/tea.jpg" alt="Tea Background" style="margin-top: 0px; margin-bottom: 0px">
+</section>
+<!-- About Section -->
+		<section class="about"> 
+    <section id="about">
+		<h2 class="text_column"><strong style="color: #2A2A2A; margin-left: 5px;">NOSOTROS</strong></h2>
+		<div class="text_column">
+		  <p>¡Descubre el mundo del té con Quiere-té!</p><p>
+
+Somos una marca apasionada por el arte y la experiencia del té. En Quiere-té, nos especializamos en ofrecer una selección exquisita de tés premium, cuidadosamente seleccionados de las mejores plantaciones del mundo. </p>
+		</div>
+        <!-- Contenido de la sección banner -->
+    </section>
+</section>
+<section class="hidden" id="abo">
+    <h2 class="hidden">About</h2>
+</section>
+        <!-- Stats Gallery Section -->
+        <div class="gallery">
+            <div class="thumbnail">
+                <h1 class="stats">Misión&nbsp;</h1>
+                <p>Empresa de venta de tés herbales que promueve productos naturales como una opción para consentirse a sí mismo.</p>
+
+            </div>
+            <div class="thumbnail">
+                <h1 class="stats">Visión&nbsp;</h1>
+                <p>Ser una marca líder reconocida gracias a la calidad de nuestros productos, siendo siempre la opción ideal para el público.</p>
+
+            </div>
+        </div>
+        <!-- Parallax Section -->
+        <section class="banner">
+            <section id="nos">
+                <div class="slider-container">
+                    <div class="slider"> 
+                        <div class="slide"><img src="images/imagenuno.jpg" alt="Imagen 1"></div>
+                        <div class="slide"><img src="images/imagendos.jpg" alt="Imagen 2"></div>
+                        <div class="slide"><img src="images/imagentres.jpg" alt="Imagen 3"></div>
+                        <!-- Agrega más imágenes según sea necesario -->
+                    </div>
+                    <button class="prev-btn">&lt;</button>
+                    <button class="next-btn">&gt;</button>
+                </div>
+            </section>
+       		
+		</section>
+	<!-- Products Section -->
+	<section class="productos" id="products">
+		<pre></pre>
+            <h2 class="text_column"><strong style="color: #2A2A2A">PRODUCTOS</strong></h2>
+            <div class="gallery">
+            <div class="thumbnail">
+                <img src="images/Alma-verde.png" alt="Imagen Circular 4" style="width: 150px; height: 150px; margin-top: 20px;">
+                <h4>Alma Verde</h4>
+				<p>$78.00 MXN</p>
+				<pre></pre>
+                <p>Té verde, hibisco, jengibre, cáscara de naranja, té limón y pétalos de rosa.</p>
+                <div class="button">Comprar</div>
+            </div>
+            <div class="thumbnail">
+                <img src="images/Bambita.png" alt="Imagen Circular 5" style="width: 150px; height: 150px; margin-top: 20px;">
+                <h4><strong>Bambita</strong></h4>
+				<p>$78.00 MXN</p>
+				<pre></pre>
+                <p>Té verde, mango, caléndula y cáscara de naranja.</p>
+                <div class="button">Comprar</div>
+            </div>
+            <div class="thumbnail">
+                <img src="images/banco-jazmin.png" alt="Imagen Circular 6" style="width: 150px; height: 150px; margin-top: 20px;">
+              <h4>Blanco Jazmín</h4>
+				<p>$78.00 MXN</p>
+				<pre></pre>
+                <p>Té blanco en hoja con hojas de jazmín.</p>
+                <div class="button">Comprar</div>  
+            </div>
+				<div class="thumbnail">
+                <img src="images/cacao-chai.png" alt="Imagen Circular 4" style="width: 150px; height: 150px; margin-top: 20px;">
+                <h4>Cacao Chai</h4>
+					<p>$78.00 MXN</p>
+				<pre></pre>
+                <p>Té negro, canela, laurel, clavo, pimienta y chocolate negro.</p>
+                <div class="button">Comprar</div>
+					
+				</div>
+				<div class="thumbnail">
+                <img src="images/dul-primavera.png" alt="Imagen Circular 4" style="width: 150px; height: 150px; margin-top: 20px;">
+                <h4>Dulce Primavera</h4>
+					<p>$78.00 MXN</p>
+				<pre></pre>
+                <p>Té negro, clavo, manzanilla, manzana, canela e hibisco.</p>
+                <div class="button">Comprar</div>
+            </div>
+            <div class="thumbnail">
+                <img src="images/Jengi-limon.png" alt="Imagen Circular 5" style="width: 150px; height: 150px; margin-top: 20px;">
+                <h4>Jengibre Limón</h4>
+				<p>$78.00 MXN</p>
+				<pre></pre>
+                <p>Té verde, jengibre, zacatillo de limón y corteza de lima.</p>
+                <div class="button">Comprar</div>
+        </div>
+		</div>
+		</section>
+		
+		<section>
+		</section>
+        <!-- Formulario de contacto (oculto inicialmente) -->
+        <section class="text_column">
+            <section id="contact">
+                <h2><strong style="color: #2A2A2A">¿NECESITAS AYUDA?</strong></h2> 
+                <div class="button" id="showFormButton">CONTÁCTANOS</div>
+				<pre></pre>
+                <div id="contactForm">
+                    <div class="contacto"> 
+                        <h2 style="color: #333;">Formulario de Contacto</h2>
+                        <form id="contact-form" action="/submit-formulario" method="post">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+
+                            <input type="submit" value="Enviar">
+                        </form>
+                        <div id="enviado-msg" style="display: none; margin-top: 10px; color: #333;">¡Gracias por tu mensaje!</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Sección de Copyrights -->
+        <footer>
+            <div class="copyright">&copy;2024- <strong>Quiere-té</strong></div>
+        </footer>
+    </div>
+
+    <!-- Copyrights Section --> <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+
+        let counter = 0;
+        const intervalTime = 2000; // Cambiar la imagen cada 2 segundos
+        let slideInterval;
+
+        // Función para avanzar al siguiente slide
+        function nextSlide() {
+            counter++;
+            if (counter === slides.length) {
+                counter = 0;
+            }
+            updateSlider();
+        }
+
+        // Función para actualizar el slider
+        function updateSlider() {
+            slider.style.transform = `translateX(-${counter * 100}%)`;
+        }
+
+        // Iniciar slider automático
+        function startSlider() {
+            slideInterval = setInterval(nextSlide, intervalTime);
+        }
+
+        // Detener slider automático cuando se pasa el ratón por encima del slider
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        // Reanudar slider automático cuando el ratón deja el slider
+        slider.addEventListener('mouseleave', startSlider);
+
+        // Botón para avanzar al slide anterior
+        prevBtn.addEventListener('click', () => {
+            counter--;
+            if (counter < 0) {
+                counter = slides.length - 1;
+            }
+            updateSlider();
+        });
+
+        // Botón para avanzar al siguiente slide
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Iniciar slider automático al cargar la página
+        startSlider();
+
+        // Obtener referencia al botón y al formulario
+        const showFormButton = document.getElementById('showFormButton');
+        const contactForm = document.getElementById('contactForm');
+
+        // Agregar evento de clic al botón para mostrar u ocultar el formulario
+        showFormButton.addEventListener('click', function() {
+            // Cambiar la visibilidad del formulario al contrario de lo que está actualmente
+            if (contactForm.style.display === 'none') {
+                contactForm.style.display = 'block';
+            } else {
+                contactForm.style.display = 'none';
+            }
+        });
+		
+    </script>
+</body>
+
+</html>
+
+
+
+
+
